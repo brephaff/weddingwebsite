@@ -1,0 +1,9 @@
+
+<%= form_tag upload_admin_people_path, :multipart => true do %>
+  <label>
+    Here is where you upload a spreadsheet of people!<br/>
+    <%= file_field_tag :file %>
+  </label>
+  <hr/>
+  <%= submit_tag %>
+<% end %>

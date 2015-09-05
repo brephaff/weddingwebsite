@@ -1,0 +1,9 @@
+<table>
+<% @spreadsheet.each do |attributes, index, row_number| %>
+  <tr>
+    <td><%= attributes['Title'] %></td>
+    <td><%= attributes['First Name'] %></td>
+    <td><%= attributes['Last Name'] %></td>
+  </tr>
+<% end %>
+</table>
