@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :people
-  resources :households
+
+  resources :households, :only => [:index, :show, :update] do
+    post :lookup, :on => :collection
+  end
 
   namespace :admin do
     resources :people do

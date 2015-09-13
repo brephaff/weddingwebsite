@@ -20,4 +20,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      person:
+        food_requirements: 'Dietary Restrictions'
+
+  simple_form:
+    labels:
+      people:
+        attending_wedding: "Are you attending the wedding?"
+        attending_rehearsal_dinner: "Are you attending the rehearsal dinner?"
+        food_requirements: "Please let us know of any allergies or dietary restrictions you may have"
+        song_requests: "What songs make you want to jump up and dance?"

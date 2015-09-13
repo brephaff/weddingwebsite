@@ -24,6 +24,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'spreadsheet_importer', :github => 'culturecode/spreadsheet_importer'
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'simple_form'
+gem 'obfuscate_id'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -45,4 +48,6 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # gem 'i18n-debug'
 end

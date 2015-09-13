@@ -1,0 +1,14 @@
+<%= simple_form_for @household, :url => household_path(@household, params.slice(:first_name, :last_name)), :html => {:id => 'household_form'} do |f| %>
+  <h2 class="paper_title">Invitations for your Household</h2>
+  <%= f.fields_for :people do |g| %>
+    <fieldset>
+      <legend><%= g.object.first_name %> <%= g.object.last_name %></legend>
+      <%= g.input :attending_wedding, :as => :radio_buttons, :wrapper_html => {data: {:behaviour => 'on-value-show', :value => 'true', :show => "##{dom_id(g.object)}_attending_fields" }} %>
+      <%= content_tag :div, :id => "#{dom_id(g.object)}_attending_fields" do %>
+        <%= g.input :attending_rehearsal_dinner, :as => :radio_buttons %>
+        <%= g.input :food_requirements %>
+        <%= g.input :song_requests %>
+      <% end %>
+    </fieldset>
+  <% end %>
+<% end %>

@@ -1,0 +1,12 @@
+
+<% if params[:failure] %>
+<h2 class="paper_title">I don't see you on my list.<br/>How is your name spelled on the invitation?</h2>
+<% else %>
+<h2 class="paper_title">May I have your name please...</h2>
+<% end %>
+
+<%= form_tag lookup_households_path, :method => :post do %>
+  <%= text_field_tag :name, params[:name], :placeholder => 'Name', :size => 50, :class => 'plain_text_input' %>
+  <hr/>
+  <%= submit_tag 'Find my invitation', :data => { :disable_with => "One moment please..." } %>
+<% end %>

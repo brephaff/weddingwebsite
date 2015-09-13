@@ -8,7 +8,12 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="container paper" id="main_container">
+  <div class="inlay">
+    <%= flash_messages %>
+    <%= yield %>
+  </div>
+</div>
 
 </body>
 </html>
