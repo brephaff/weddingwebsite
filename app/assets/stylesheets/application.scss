@@ -11,8 +11,48 @@
  * file per style scope.
  *
  *= require_self
+ *= require_tree ./application
  */
 
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+// LAYOUT
+
+.section {
+  min-height: 400px;
+  padding: 10% 0;
+  text-align: center;
+}
+
+// TEXT
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Merriweather:400,300);
+
+h1, h2, h3, h4, h5{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  margin: 1em 0;
+}
+
+h1{
+  font-size: 54px;
+  text-transform: uppercase;
+}
+
+.subtitle{
+  text-transform: uppercase;
+  display: block;
+  color: inherit;
+  font-family: 'Merriweather', serif;
+  font-size: 32%;
+  font-weight: 400;
+  letter-spacing: 4pt;
+  margin: 1em 0;
+}
+
+body{
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+}

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
-  resources :households, :only => [:index, :show, :update] do
+  resources :households, :only => [:index, :show, :update], :path => 'rsvp' do
     post :lookup, :on => :collection
   end
 
