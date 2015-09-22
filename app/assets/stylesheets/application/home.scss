@@ -1,10 +1,40 @@
-#title_section {
-  background-color: rgb(33, 53, 99);
-  color: white
+$navy-blue: rgb(33, 53, 99);
+$gold: #D5AF76;
+
+@mixin gold-section {
+  color: white;
+  background: $gold;
+
+  a {
+    color: rgb(110, 50, 100);
+  }
 }
+
+@mixin navy-section {
+  color: white;
+  background: $navy-blue;
+
+}
+
+#title_section {
+  @include navy-section;
+}
+
 #story_section {
 }
+
 #save_the_date_section {
-  background-color: #D5AF76;
-  color: white;
+  @include gold-section;
+}
+
+#wedding_details_section {
+}
+
+#accommodations_section {
+  @include gold-section;
+}
+
+.hotel_block p {
+  text-align: justify;
+  margin: 0 15px 40px;
 }
