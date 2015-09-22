@@ -4,9 +4,10 @@ $gold: #D5AF76;
 @mixin gold-section {
   color: white;
   background: $gold;
+  text-shadow: 0 0 1px rgba(0,0,0,.3); // Make white text more visible on uncalibrated monitors
 
   a {
-    color: rgb(110, 50, 100);
+    color: rgb(183, 36, 158);
   }
 }
 
@@ -37,4 +38,15 @@ $gold: #D5AF76;
 .hotel_block p {
   text-align: justify;
   margin: 0 15px 40px;
+}
+
+.schedule {
+  .timestamp {
+    margin-bottom: 0.25em;
+    font-size: 0.9em;
+    opacity: .7;
+  }
+  .description {
+    margin-bottom: 1em;
+  }
 }
