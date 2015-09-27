@@ -27,6 +27,7 @@ gem 'spreadsheet_importer', :github => 'culturecode/spreadsheet_importer'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'simple_form'
 gem 'obfuscate_id'
+gem "autoprefixer-rails"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
