@@ -68,7 +68,11 @@ $gold: #D5AF76;
 }
 
 #accommodations_section {
-  @include gold-section;
+  @include navy-section;
+}
+
+#about_vancouver_section {
+  @include white-section;
 }
 
 .hotel_block {
