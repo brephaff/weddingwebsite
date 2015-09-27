@@ -1,5 +1,13 @@
+@import 'buttons';
+
 $navy-blue: rgb(33, 53, 99);
 $gold: #D5AF76;
+
+@mixin white-section {
+  .btn {
+    @include wire-button(#1C53BF, white);
+  }
+}
 
 @mixin gold-section {
   color: white;
@@ -9,12 +17,19 @@ $gold: #D5AF76;
   a {
     color: rgb(183, 36, 158);
   }
+
+  .btn {
+    @include wire-button(white, #333);
+  }
 }
 
 @mixin navy-section {
   color: white;
   background: $navy-blue;
 
+  .btn {
+    @include wire-button(white, #333);
+  }
 }
 
 @mixin map-section($map_url) {
@@ -34,6 +49,7 @@ $gold: #D5AF76;
 }
 
 #story_section {
+  @include white-section;
 }
 
 #save_the_date_section {
@@ -41,15 +57,22 @@ $gold: #D5AF76;
 }
 
 #wedding_details_section {
+  @include white-section;
 }
 
 #accommodations_section {
   @include gold-section;
 }
 
-.hotel_block p {
-  text-align: justify;
+.hotel_block {
   margin: 0 15px 40px;
+
+  p {
+    text-align: justify;
+  }
+}
+.button_list{
+  margin: 1em 0;
 }
 
 .schedule {

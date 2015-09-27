@@ -1,0 +1,18 @@
+
+@mixin wire-button($colour, $textHoverColour) {
+  background-color: transparent;
+  font-family: 'Helvetica Neue';
+  font-weight: 200;
+  letter-spacing: 1pt;
+  opacity: .9;
+
+  color: $colour !important;
+  border-color: $colour;
+  background-color: transparent;
+
+  &:hover {
+    color: $textHoverColour !important;
+    background-color: $colour;
+  }
+
+}
