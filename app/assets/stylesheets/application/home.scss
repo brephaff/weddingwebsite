@@ -17,6 +17,18 @@ $gold: #D5AF76;
 
 }
 
+@mixin map-section($map_url) {
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 0 21px rgb(228, 172, 47);
+  position: relative;
+  overflow: hidden;
+  background-image: url($map_url);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
 #title_section {
   @include navy-section;
 }
@@ -25,7 +37,7 @@ $gold: #D5AF76;
 }
 
 #save_the_date_section {
-  @include gold-section;
+  @include map-section("http://maps.googleapis.com/maps/api/staticmap?scale=2&center=1138%20Homer%20Street,%20Vancouver&size=800x500&sensor=false&zoom=14&&maptype=roadmap&style=feature%3Aadministrative%7Celement%3Alabels%7Cvisibility%3Aoff%7C&style=feature%3Alandscape%7Celement%3Aall%7Chue%3A0xffad00%7Csaturation%3A50.2%7Clightness%3A-34.8%7Cgamma%3A1%7C&style=feature%3Apoi%7Celement%3Aall%7Chue%3A0xffc300%7Csaturation%3A54.2%7Clightness%3A-14.4%7Cgamma%3A1%7C&style=feature%3Apoi%7Celement%3Ageometry.fill%7Cvisibility%3Aon%7Chue%3A0xffd000%7C&style=feature%3Apoi%7Celement%3Alabels%7Cvisibility%3Aoff%7C&style=feature%3Aroad%7Celement%3Aall%7Cvisibility%3Aon%7C&style=feature%3Aroad%7Celement%3Ageometry.fill%7Cvisibility%3Aoff%7C&style=feature%3Aroad%7Celement%3Ageometry.stroke%7Cvisibility%3Aon%7C&style=feature%3Aroad%7Celement%3Alabels%7Cvisibility%3Aoff%7C&style=feature%3Aroad.highway%7Celement%3Aall%7Chue%3A0xFFAD00%7Csaturation%3A-19.8%7Clightness%3A-1.8%7Cgamma%3A1%7C&style=feature%3Aroad.highway.controlled_access%7Celement%3Aall%7Cvisibility%3Aon%7C&style=feature%3Aroad.arterial%7Celement%3Aall%7Chue%3A0xFFAD00%7Csaturation%3A72.4%7Clightness%3A-32.6%7Cgamma%3A1%7C&style=feature%3Aroad.local%7Celement%3Aall%7Chue%3A0xFFAD00%7Csaturation%3A74.4%7Clightness%3A-18%7Cgamma%3A1%7C&style=feature%3Atransit%7Celement%3Alabels%7Cvisibility%3Aoff%7C&style=feature%3Awater%7Celement%3Aall%7Chue%3A0x00FFA6%7Csaturation%3A-63.2%7Clightness%3A38%7Cgamma%3A1%7C");
 }
 
 #wedding_details_section {
