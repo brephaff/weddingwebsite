@@ -24,7 +24,12 @@
 .section {
   min-height: 400px;
   padding: 10% 0;
+
   text-align: center;
+
+  p {
+    text-align: justify;
+  }
 }
 
 // TEXT
@@ -49,6 +54,7 @@ h1{
   font-size: 32%;
   font-weight: 400;
   letter-spacing: 4pt;
+  line-height: 2em;
   margin: 1em 0;
 }
 
