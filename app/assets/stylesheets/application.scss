@@ -32,6 +32,10 @@
   }
 }
 
+#page_nav{
+  text-align: center;
+}
+
 // TEXT
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Merriweather:400,300);
 
@@ -61,4 +65,39 @@ h1{
 body{
   font-family: 'Merriweather', serif;
   font-size: 16px;
+}
+
+// NAV
+
+body {
+  position: relative;
+  // padding-top: 70px;
+}
+
+#page_nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  z-index: 1; // Place above map
+  background-color: #213563;
+
+  li {
+    display: inline-block;
+
+    a {
+      transition: color 0.5s;
+    }
+    a:hover, a:active, a:focus {
+      color: white;
+      background-color: transparent;
+      transition: color 0.15s;
+    }
+  }
+  li.active{
+    a {
+      color: rgba(255,255,255,.85);
+    }
+  }
 }

@@ -13,4 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.smooth-scroll
 //= require bootstrap-sprockets
+
+$(function(){
+  $('a').smoothScroll()
+})

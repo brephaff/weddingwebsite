@@ -6,9 +6,19 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body data-spy="scroll">
 
 <%= flash_messages %>
+
+<% if content_for? :page_nav %>
+<nav id="page_nav">
+  <ul class="nav" role="tablist">
+    <%= content_for :page_nav %>
+  </ul>
+</nav>
+<%= javascript_tag "$('body').scrollspy({ target: '#page_nav', offset:50 })" %>
+<% end %>
+
 <%= yield %>
 
 </body>
