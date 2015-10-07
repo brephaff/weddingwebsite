@@ -38,6 +38,11 @@ $gold: #D5AF76;
   }
 }
 
+@mixin grey-section {
+  color: #AAA;
+  background: #333;
+}
+
 @mixin map-section($map_url) {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 0 21px rgb(228, 172, 47);
   position: relative;
@@ -72,7 +77,10 @@ $gold: #D5AF76;
 }
 
 #footer_section {
-  @include white-section;
+  @include grey-section;
+  min-height: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
 }
 
 .hotel_block {
