@@ -1,0 +1,11 @@
+.one_at_a_time_list{
+  li {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  li.show{
+    opacity: 1;
+  }
+}

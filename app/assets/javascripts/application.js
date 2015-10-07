@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require jquery.smooth-scroll
 //= require bootstrap-sprockets
+//= require_tree ./application
 
 $(function(){
   $('a').smoothScroll()
