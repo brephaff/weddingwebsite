@@ -63,6 +63,8 @@
 
 // As the page nav enters the new section, change the colours
 @mixin nav-colour($background, $color, $active){
+  overflow: hidden; // Fix bug where background would disappear in IE
+
   .page_nav_colour_swap{
     background-color: $background;
   }

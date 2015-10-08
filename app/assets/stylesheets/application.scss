@@ -27,6 +27,12 @@
   position: relative; // Contain the colour swap element
   text-align: center;
 
+  // Don't put this on the section because it will break the nav colour swap in IE
+  .container{
+    position: relative;
+    z-index: 0; // Ensure that negative positioned elements don't fall through the back of the section
+  }
+
   p {
     text-align: justify;
   }
