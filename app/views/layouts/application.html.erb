@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body data-spy="scroll">
+<body>
 
 <%= flash_messages %>
 
@@ -16,7 +16,6 @@
     <%= content_for :page_nav %>
   </ul>
 </nav>
-<%= javascript_tag "$('body').scrollspy({ target: '#page_nav', offset:50 })" %>
 <% end %>
 
 <%= yield %>

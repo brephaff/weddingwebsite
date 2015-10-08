@@ -24,7 +24,7 @@
 .section {
   min-height: 400px;
   padding: 10% 0;
-
+  position: relative; // Contain the colour swap element
   text-align: center;
 
   p {
@@ -34,13 +34,39 @@
 
 #page_nav{
   text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2; // Place above map and page_nav_colour_swap
+
+  li {
+    display: inline-block;
+  }
+}
+.page_nav_colour_swap_container{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  left: 0;
+  /* z-index: -1; */
+  clip: rect(0, auto, auto, 0);
+
+  .page_nav_colour_swap{
+    position: fixed;
+    height: 42px;
+    width: 100%;
+    top: 0;
+    z-index: 1; // place above text
+  }
 }
 
 // TEXT
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Merriweather:400,300);
 
 h1, h2, h3, h4, h5{
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Merriweather', serif;
   font-weight: 700;
   margin: 1em 0;
 }
@@ -75,18 +101,10 @@ body {
 }
 
 #page_nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  font-family: 'Merriweather', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   text-transform: lowercase;
-  z-index: 1; // Place above map
-  background-color: #213563;
 
   li {
-    display: inline-block;
-
     a {
       transition: color 0.5s;
     }

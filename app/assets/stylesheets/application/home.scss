@@ -1,59 +1,4 @@
-@import 'buttons';
-
-$navy-blue: rgb(33, 53, 99);
-$gold: #D5AF76;
-
-@mixin white-section {
-  .btn {
-    @include wire-button(#1C53BF, white);
-  }
-}
-
-@mixin gold-section {
-  color: white;
-  background: $gold;
-  text-shadow: 0 0 1px rgba(0,0,0,.3); // Make white text more visible on uncalibrated monitors
-
-  a {
-    color: #CE378F;
-    text-shadow: none;
-  }
-
-  .btn {
-    text-shadow: 0 0 1px rgba(0,0,0,.3); // Make white text more visible on uncalibrated monitors
-    @include wire-button(white, #333);
-
-    &:hover {
-      text-shadow: none;
-    }
-  }
-}
-
-@mixin navy-section {
-  color: white;
-  background: $navy-blue;
-
-  .btn {
-    @include wire-button(white, #333);
-  }
-}
-
-@mixin grey-section {
-  color: #AAA;
-  background: #333;
-}
-
-@mixin map-section($map_url) {
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 0 21px rgb(228, 172, 47);
-  position: relative;
-  overflow: hidden;
-  background-image: url($map_url);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  color: white;
-}
+@import 'sections', 'colours';
 
 #title_section {
   @include navy-section;
@@ -81,6 +26,12 @@ $gold: #D5AF76;
   min-height: 0;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
+}
+
+// Hide the title section link without removing it so as not to mess up scrollspy
+#page_nav a[href="#title_section"]{
+  // position: absolute;
+  // top: -100px;
 }
 
 .hotel_block {

@@ -19,4 +19,16 @@
 
 $(function(){
   $('a').smoothScroll()
+
+  // Add scrollspy if there is a page nav
+  if ($('#page_nav').length){
+
+    // Change tag the body element with the scrollspy'd element so we can change nav colours as
+    $('body').on('activate.bs.scrollspy', function (event) {
+      var target = $(event.target).find('a').attr('href')
+      $(this).attr('data-scrollspy-target', target)
+    })
+
+    $('body').scrollspy({ target: '#page_nav', offset:25 })
+  }
 })
