@@ -91,6 +91,18 @@ $gold: #D5AF76;
   }
 }
 
+// Added a wider gutter between hotel blocks in columns
+.col-md-6:last-child {
+  .hotel_block {
+    margin-left: 10px;
+  }
+}
+.col-md-6:first-child {
+  .hotel_block {
+    margin-right: 10px;
+  }
+}
+
 .button_list{
   margin: 1em 0;
 }
