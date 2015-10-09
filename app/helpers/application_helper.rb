@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def page_nav_colour_swap_background
-    content_tag :div, :class => 'page_nav_colour_swap_container' do
+    content_tag :div, :class => 'page_nav_colour_swap_container hidden-xs' do
       content_tag :div, '', :class => 'page_nav_colour_swap'
     end
   end

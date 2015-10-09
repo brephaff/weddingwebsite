@@ -1,6 +1,11 @@
 $(function(){
   $('[data-behaviour=one-at-a-time-list]').each(function(){
-    $(this).addClass('one_at_a_time_list')
+    // Freeze height before absolute positioning list items
+    list = $(this)
+    list.height(list.find('li').height())
+
+    list.addClass('one_at_a_time_list')
+
     var items = $(this).find('li')
     var index = 0
 

@@ -6,13 +6,14 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= ie_compatibility %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
 <%= flash_messages %>
 
 <% if content_for? :page_nav %>
-<nav id="page_nav">
+<nav id="page_nav" class="hidden-xs">
   <ul class="nav" role="tablist">
     <%= content_for :page_nav %>
   </ul>

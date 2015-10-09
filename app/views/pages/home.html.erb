@@ -3,15 +3,26 @@
   <li><a href="#story_section">Our Story</a></li>
   <li><a href="#save_the_date_section">Save the Date</a></li>
   <li><a href="#wedding_details_section">Details</a></li>
-  <li><a href="#accommodations_section">Accommodations</a></li>
+  <li><a href="#accommodations_section">Hotels</a></li>
 <% end %>
 
 <section class="section" id="title_section">
   <%= page_nav_colour_swap_background %>
   <div class="container">
       <h1>
+<<<<<<< HEAD
       Nick and Bre Get Married
       <small class="subtitle">August 28, 2016 / Brix Restaurant / Vancouver</small>
+=======
+      Nick And Bre Get Married
+      <small class="subtitle">
+        <span class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline">August 28, 2016</span>
+        <span class="hidden-xs">/</span>
+        <span class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline">Brix Restaurant</span>
+        <span class="hidden-xs">/</span>
+        <span class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline">Vancouver</span>
+      </small>
+>>>>>>> Mobile fixes
     </h1>
 
     <%#= link_to 'RSVP', households_path, :class => 'btn' %>
@@ -95,7 +106,7 @@
 <section class="section" id="accommodations_section">
   <%= page_nav_colour_swap_background %>
   <div class="container">
-    <h1>Accommodations</h1>
+    <h1>Hotels</h1>
     <p>For your convenience, we've reserved blocks of rooms at two hotels. All rooms in the blocks will be released to the public on <b>July 15, 2016</b>, so make sure to book before then! Given the high cost of hotels in Vancouver, we would also recommend checking out alternate accommodation options like <a href="https://www.airbnb.ca/c/nicholasj17?s=8" target="_blank">Airbnb</a>. We've even hooked you up with a credit towards your booking.</p>
     <div class="row">
       <div class="col-md-6">
@@ -106,33 +117,23 @@
           <p>This is a 3-star hotel in the center of downtown. It is 4-blocks away from Brix Restaurant and the closest Skytrain station (Yaletown Roundhouse). All rooms are suites, complete with a kitchenette and living space. Group rates are $189 + tax for a one bedroom suite and $249 + tax for a two bedroom suite.</p>
           <p>To book, call 1-800-661-8870 and quote group code 602125 or book online.</p>
         </div>
+        <ul class="list-inline button_list">
+          <li><a href="https://www.reservations-page.com/C00000/H08749/be.ashx?pc=602125&hid=8749&cid=0&acid=admin&unq=aa6b74ed-debd-43d1-93d8-5bd46137d1da" target="_blank" class="btn">Online Booking</a></li>
+          <li><a href="https://maps.google.com/?daddr=Rosedale+on+Robson+Suite+Hotel, Vancouver&saddr=Current+Location" target="_blank" class="btn">Directions</a></li>
+        </ul>
       </div>
       <div class="col-md-6">
         <div class="hotel_block">
           <h1>
-            <small class="subtitle"><b>Sheraton Wall Centre Vancouver</b></small>
+            <small class="subtitle"><b>Sheraton Wall Centre <span class="hidden-md">Vancouver</span></b></small>
           </h1>
           <p>This is a 4-star hotel in the center of downtown. It is 6-blocks away from Brix Restaurant and the closest Skytrain station (Vancouver City Centre). All rooms will be located in the newly renovated South Tower, and include complimentary Wifi. Group rates are $229 + tax for a Single or Double room.</p>
           <p>To book, call 1-800-663-9255 and quote "Brianne Phaff and Nicholas Jakobsen Wedding" or book online.</p>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="hotel_block">
-          <ul class="list-inline button_list">
-            <li><a href="https://www.reservations-page.com/C00000/H08749/be.ashx?pc=602125&hid=8749&cid=0&acid=admin&unq=aa6b74ed-debd-43d1-93d8-5bd46137d1da" target="_blank" class="btn">Online Booking</a></li>
-            <li><a href="https://maps.google.com/?daddr=Rosedale+on+Robson+Suite+Hotel, Vancouver&saddr=Current+Location" target="_blank" class="btn">Directions</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="hotel_block">
-          <ul class="list-inline button_list">
-            <li><a href="https://www.starwoodmeeting.com/events/start.action?id=1509286469&key=9C003E" target="_blank" class="btn">Online Booking</a></li>
-            <li><a href="https://maps.google.com/?daddr=Brix+Restaurant+%26+Wine+Bar, Vancouver&saddr=Current+Location" target="_blank" class="btn">Directions</a></li>
-          </ul>
-        </div>
+        <ul class="list-inline button_list">
+          <li><a href="https://www.starwoodmeeting.com/events/start.action?id=1509286469&key=9C003E" target="_blank" class="btn">Online Booking</a></li>
+          <li><a href="https://maps.google.com/?daddr=Brix+Restaurant+%26+Wine+Bar, Vancouver&saddr=Current+Location" target="_blank" class="btn">Directions</a></li>
+        </ul>
       </div>
     </div>
   </div>
