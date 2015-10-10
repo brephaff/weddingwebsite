@@ -1,13 +1,18 @@
 .one_at_a_time_list{
   position: relative;
 
+  // Toggle to enable transition once we turn the list "on"
+  &.on li{
+    transition: color 0.5s;
+  }
+
   li {
     width: 100%;
     position: absolute;
     color: transparent;
-    transition: color 0.5s;
   }
-  li.show{
+
+  li.visible{
     color: inherit;
   }
 }
@@ -18,7 +23,7 @@
     visibility: hidden;
   }
 
-  li.show {
+  li.visible {
     visibility: visible;
   }
 }

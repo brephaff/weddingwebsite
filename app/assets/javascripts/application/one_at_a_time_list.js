@@ -4,12 +4,14 @@ $(function(){
     list = $(this)
     list.height(list.find('li').height())
 
-    list.addClass('one_at_a_time_list')
-
     var items = $(this).find('li')
     var index = 0
 
-    start()
+    // Don't immediately add the 'on' class or the browser won't see it as a separate from adding 'one_at_a_time_list'
+    setTimeout(function(){
+      list.addClass('on')
+      start()
+    }, 1)
 
     function start(){
       showItem(index++)
@@ -19,8 +21,8 @@ $(function(){
     }
 
     function showItem(index){
-      $(items[index]).addClass('show')
-      items.not(items[index]).removeClass('show')
+      $(items[index]).addClass('visible')
+      items.not(items[index]).removeClass('visible')
     }
   })
 })
