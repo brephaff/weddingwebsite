@@ -17,7 +17,7 @@ $(function(){
       showItem(index++)
       if (index == items.length)
         index = 0
-      setTimeout(start, 4000 + Math.random() * 1000);
+      setTimeout(start, 6000 + Math.random() * 1000);
     }
 
     function showItem(index){
