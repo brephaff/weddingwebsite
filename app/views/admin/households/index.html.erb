@@ -1,0 +1,25 @@
+<%= link_to "New Household", new_admin_household_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Street Address</th>
+      <th>City</th>
+      <th>Province</th>
+      <th>Country</th>
+      <th>Postal Code</th>
+    </tr>
+  </thead>
+<% @households.each do |household| %>
+  <tr>
+    <td><%= household.name %></td>
+    <td><%= household.full_street_address %></td>
+    <td><%= household.city %></td>
+    <td><%= household.province %></td>
+    <td><%= household.country %></td>
+    <td><%= household.postal_code %></td>
+    <td><%= link_to 'Edit', edit_admin_household_path(household) %></td>
+  </tr>
+<% end %>
+</table>

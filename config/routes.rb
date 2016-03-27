@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :people do
+    resources :households, :except => :show
+    resources :people, :except => :show do
       get :import, :on => :collection
       post :upload, :on => :collection
     end
