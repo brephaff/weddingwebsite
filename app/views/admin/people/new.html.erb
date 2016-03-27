@@ -1,0 +1,16 @@
+<h1>Create a New Person</h1>
+
+<%= simple_form_for [:admin, @person] do |f| %>
+  <%= f.input(:title) %>
+  <%= f.input(:first_name) %>
+  <%= f.input(:last_name) %>
+  <%= f.association(:household) %>
+  <%= f.input(:email_address) %>
+  <%= f.input(:street_address) %>
+  <%= f.input(:street_address2) %>
+  <%= f.input(:city) %>
+  <%= f.input(:province) %>
+  <%= f.input(:country, :as => :string) %>
+  <%= f.input(:postal_code) %>
+  <%= f.submit %>
+<% end %>
