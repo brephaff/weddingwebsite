@@ -1,31 +1,36 @@
 <%= link_to "New Person", new_admin_person_path %>
 
 <table>
-  <tr>
-    <th>Title</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Household</th>
-    <th>Email Address</th>
-    <th>Street Address</th>
-    <th>Street Address 2</th>
-    <th>City</th>
-    <th>Province</th>
-    <th>Country</th>
-    <th>Postal Code</th>
-  </tr>
-  <% @people.each do |person| %>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Household</th>
+      <th>Email Address</th>
+      <th>Street Address</th>
+      <th>City</th>
+      <th>Province</th>
+      <th>Country</th>
+      <th>Postal Code</th>
+    </tr>
+  </thead>
+<% @people.group_by(&:household).each do |household, people| %>
+  <tbody class='striped'>
+  <% people.each do |person| %>
     <tr>
       <td><%= person.title %></td>
       <td><%= person.first_name %></td>
       <td><%= person.last_name %></td>
       <td><%= person.household_id %></td>
       <td><%= person.email_address %></td>
-      <td><%= person.street_address %><br><%= person.street_address2 %></td>
+      <td><%= person.full_street_address %></td>
       <td><%= person.city %></td>
       <td><%= person.province %></td>
       <td><%= person.country %></td>
       <td><%= person.postal_code %></td>
     </tr>
   <% end %>
+  </tbody>
+<% end %>
 </table>

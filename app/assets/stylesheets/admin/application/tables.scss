@@ -1,5 +1,5 @@
 table {
-  border: solid black 1px;
+  border-collapse: collapse;
 
   td {
     padding: 1em;
@@ -7,6 +7,10 @@ table {
 
   th {
     padding: 1em;
+    text-align: left;
   }
 
+  tbody {
+    border: solid black 1px;
+  }
 }

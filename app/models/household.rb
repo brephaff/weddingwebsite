@@ -19,4 +19,8 @@ class Household < ActiveRecord::Base
   def name
     "Household #{id} (#{people.collect(&:name).to_sentence})"
   end
+
+  def full_street_address
+    "#{street_address}\n#{street_address2}".squish
+  end
 end
