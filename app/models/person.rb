@@ -7,7 +7,7 @@ class Person < ActiveRecord::Base
   delegate :full_street_address, :city, :province, :country, :postal_code, :to => :household, :allow_nil => true
 
   def name
-    first_name + " " + last_name
+    "#{first_name} #{last_name}".squish
   end
 
   def reset_choices!
