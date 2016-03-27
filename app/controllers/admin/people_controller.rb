@@ -1,3 +1,5 @@
+require 'person_import'
+
 class Admin::PeopleController < Admin::ApplicationController
   def index
     @people = Person.order(household_id: :asc, first_name: :asc)
@@ -17,7 +19,8 @@ class Admin::PeopleController < Admin::ApplicationController
   end
 
   def upload
-    @spreadsheet = SpreadsheetImporter::Import.from_xlsx(params[:file].path).to_a
+    PersonImport.from_xlsx(params[:file].path, :sheet_name => 'Head Count')
+    redirect_to(admin_people_path)
   end
 
   private
