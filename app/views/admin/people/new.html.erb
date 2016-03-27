@@ -4,13 +4,7 @@
   <%= f.input(:title) %>
   <%= f.input(:first_name) %>
   <%= f.input(:last_name) %>
-  <%= f.association(:household) %>
   <%= f.input(:email_address) %>
-  <%= f.input(:street_address) %>
-  <%= f.input(:street_address2) %>
-  <%= f.input(:city) %>
-  <%= f.input(:province) %>
-  <%= f.input(:country, :as => :string) %>
-  <%= f.input(:postal_code) %>
+  <%= f.association(:household) %>
   <%= f.submit %>
 <% end %>
