@@ -7,5 +7,5 @@
 
   <%= f.submit %>
   <%= link_to('Cancel', admin_households_path) %>
-  <%= link_to('Destroy', admin_household_path(household), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this household?'}) %>
+  <%= link_to('Destroy', admin_household_path(household), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this household?'}) if household.persisted? %>
 <% end %>
