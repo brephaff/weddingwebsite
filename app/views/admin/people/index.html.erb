@@ -29,6 +29,7 @@
       <td><%= person.province %></td>
       <td><%= person.country %></td>
       <td><%= person.postal_code %></td>
+      <td><%= link_to 'Edit', edit_admin_person_path(person) %></td>
     </tr>
   <% end %>
   </tbody>

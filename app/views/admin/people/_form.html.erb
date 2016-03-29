@@ -1,0 +1,11 @@
+<%= simple_form_for [:admin, person] do |f| %>
+  <%= f.input(:title) %>
+  <%= f.input(:first_name) %>
+  <%= f.input(:last_name) %>
+  <%= f.input(:email_address) %>
+  <%= f.association(:household) %>
+
+  <%= f.submit %>
+  <%= link_to('Cancel', admin_people_path) %>
+  <%= link_to('Destroy', admin_person_path(person), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this person?'}) if person.persisted? %>
+<% end %>
