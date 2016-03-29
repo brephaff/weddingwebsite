@@ -2,7 +2,7 @@ class Household < ActiveRecord::Base
   has_many :people, lambda { order :first_name, :last_name }
 
   accepts_nested_attributes_for :people
-  validates_presence_of :street_address, :city, :province, :country, :postal_code
+  validates_presence_of :street_address, :city, :country
 
   obfuscate_id
 
