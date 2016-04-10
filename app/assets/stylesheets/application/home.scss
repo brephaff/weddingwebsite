@@ -21,6 +21,10 @@
   @include navy-section;
 }
 
+#about_vancouver_section {
+  @include white-section;
+}
+
 #footer_section {
   @include grey-section;
   min-height: 0;
