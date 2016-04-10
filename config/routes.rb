@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
-  resources :households, :only => [:index, :show, :update], :path => 'rsvp' do
-    post :lookup, :on => :collection
+  resources :households, :only => [:edit, :update], :path => 'rsvp' do
+     match :lookup, :on => :collection, :via => [:get, :post]
   end
 
   namespace :admin do

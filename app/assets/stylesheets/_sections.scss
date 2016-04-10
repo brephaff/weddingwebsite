@@ -5,6 +5,17 @@
   .btn {
     @include wire-button($bright-blue, white);
   }
+
+  input[type='text']{
+    @include wire-button-input(#F0F0F0, #333);
+  }
+
+  textarea {
+    background: #F0F0F0;
+    border: none;
+    box-shadow: none;
+    resize: none;
+  }
 }
 
 @mixin gold-section {
@@ -35,6 +46,10 @@
 
   .btn {
     @include wire-button(white, #333);
+  }
+
+  input[type='text']{
+    @include wire-button-input(white, #333);
   }
 }
 

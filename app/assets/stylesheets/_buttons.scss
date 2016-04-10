@@ -1,5 +1,5 @@
 
-@mixin wire-button($colour, $textHoverColour) {
+@mixin wire-button-base($colour) {
   background-color: transparent;
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 200;
@@ -9,10 +9,23 @@
   color: $colour !important;
   border-color: $colour;
   background-color: transparent;
+}
+
+@mixin wire-button($colour, $textHoverColour) {
+  @include wire-button-base($colour);
 
   &:hover {
     color: $textHoverColour !important;
     background-color: $colour;
   }
+}
 
+@mixin wire-button-input($backgroundColour, $textColour) {
+  @include wire-button-base($textColour);
+  background-color: $backgroundColour;
+  height: 34px;
+  border: none;
+  border-radius: 4px;
+  vertical-align: middle;
+  padding: 0 12px;
 }

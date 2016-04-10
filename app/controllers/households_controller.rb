@@ -1,22 +1,21 @@
 class HouseholdsController < ApplicationController
 
   def lookup
-    redirect_to Household.find_by_person_name(params[:name])
+    if params[:name]
+      redirect_to [:edit, Household.find_by_person_name(params[:name])]
+    end
+
   rescue ActiveRecord::RecordNotFound
-    redirect_to [Household, params.slice(:first_name, :last_name).merge(:failure => true)]
+    @lookup_failure = true
   end
 
-  def show
+  def edit
     @household = Household.find(params[:id])
   end
 
   def update
-    Household.find(params[:id]).update_attributes!(household_params)
-
-    respond_to do |format|
-      format.js { render :nothing => true }
-      format.html
-    end
+    @household = Household.find(params[:id])
+    @household.update_attributes!(household_params)
   end
 
   private

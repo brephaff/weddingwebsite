@@ -1,0 +1,20 @@
+@import 'buttons';
+@import 'colours';
+
+form {
+  fieldset {
+    margin-bottom: 50px;
+  }
+
+  .check_boxes, .radio_buttons {
+    label {
+      display: block;
+    }
+  }
+  .checkbox, .radio {
+    display: inline-block;
+  }
+  .checkbox + .checkbox, .radio + .radio {
+      margin-left: 3em;
+  }
+}

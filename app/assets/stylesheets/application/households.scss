@@ -1,0 +1,21 @@
+@import 'sections';
+@import 'buttons';
+@import 'colours';
+
+input#name_lookup {
+  @include wire-button-base(white);
+  background-color: transparent;
+  border: 1px solid;
+}
+
+#rsvp_lookup_section{
+  @include white-section;
+}
+
+#rsvp_edit_section{
+  @include white-section;
+}
+
+#rsvp_thank_you_section{
+  @include white-section;
+}

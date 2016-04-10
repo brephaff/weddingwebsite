@@ -1,0 +1,19 @@
+<section class="section" id="rsvp_thank_you_section">
+  <div class="container">
+
+  <h1>Thanks for letting us know</h1>
+
+<% if @household.people.any?(&:attending_wedding?) %>
+  We're excited to see you at the wedding! In the meantime, check out our guide to Vancouver for things to eat, do,
+  and see while you're here.
+
+  <ul class="list-inline button_list">
+    <li><%= link_to "Vancouver Guide", root_path(:anchor => 'vancouver'), :class => 'btn' %></li>
+  </ul>
+
+<% else %>
+  Aw, that's too bad, you're missing out on a heck of a party. It's okay though, we still love ya.
+<% end %>
+
+  </div>
+</section>
