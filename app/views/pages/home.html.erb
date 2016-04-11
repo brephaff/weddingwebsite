@@ -140,62 +140,85 @@
   <%= page_nav_colour_swap_background %>
   <div class="container">
     <h1>About Vancouver</h1>
-      <p>We both love Vancouver and we are very excited by this opportunity to share it with you. It has something for everyone!</p>
     <h2>Getting Around</h2>
-      <p>The easiest way to get around Vancouver is by transit. The Skytrain has three main lines:</p>
-        <ul style="list-style-type:none">
-          <li>Canada Line: Travels from the airport to Waterfront Station in downtown Vancouver.</li>
-          <li>Expo Line: Travels from Waterfront Station in downtown Vancouver to King George station in Surrey.</li>
-          <li>Millennium Line: Travels from Waterfront Station in downtown Vancouver to VCC Clark station in a loop around Burnaby and Coquitlam.</li>
-        </ul>
+    <p>
+      We both love Vancouver and we are very excited by this opportunity to share it with you. It has something for
+      everyone! The easiest way to get around the city is to use public transit like the buses and Skytrains. If that's
+      not your thing, we also have taxis. Like any major city, all of Vancouver's transit options are
+      <%= link_to 'available on Google Maps', 'https://www.google.com/maps' %>, so plan your trips there.
+    </p>
+    <div class="row">
+      <div class="col-md-4">
+        <h1>
+          <small class="subtitle"><b>Skytrain</b></small>
+        </h1>
+        <p>There are several other lines, but the Canada line is the one you'll use most while you're here.</p>
+        <dl style="list-style-type:none">
+          <dt>Canada Line</dt> <dd>Travels from the airport to Waterfront Station in downtown Vancouver.</dd>
+        </dl>
         <a href="http://www.translink.ca/-/media/Documents/schedules_and_maps/transit_maps/SkyTrainSystemMap.pdf" target="_blank" class="btn">Skytrain Map</a>
-      <p>Taxis are also readily available in Vancouver. Taxis can easily be hailed from any main street. The main taxi companies are:</p>
+      </div>
+      <div class="col-md-4">
+        <h1>
+          <small class="subtitle"><b>Bus</b></small>
+        </h1>
+        <p>Buses are cheap and easy to use. They stop every couple blocks and allow you to transfer to
+          other buses, skytrains, or even the <%= link_to 'seabus', '' %> if you want to explore the
+          <%= link_to 'North Shore', '' %>.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h1>
+          <small class="subtitle"><b>Taxi</b></small>
+        </h1>
+        <p>Taxis are also readily available in Vancouver. Taxis can easily be hailed from any main street. The main taxi companies are:</p>
         <ul class="list-inline button_list">
-          <li><a href="http://btccabs.ca/" target="_blank" class="btn">Black Top and Checker Cabs</a></li>
           <li><a href="http://www.avancouvertaxi.com/" target="_blank" class="btn">Vancouver Taxi</a></li>
           <li><a href="http://www.yellowcabonline.com/" target="_blank" class="btn">Yellow Cab</a></li>
         </ul>
+      </div>
+    </div>
     <h2>Attractions</h2>
       <table class="table">
         <caption>I want to ...</caption>
         <tr>
-          <td>... go for a hike</td>
+          <td class="col-md-4">... go for a hike</td>
           <td>Climb <a href="https://www.vancouvertrails.com/trails/stawamus-chief/">The Chief</a>!</td>
         </tr>
         <tr>
-          <td>... shop and sample tasty food by the waterfront</td>
+          <td>… shop and eat tasty food by the waterfront</td>
           <td>Explore <a href="http://granvilleisland.com/">Granville Island</a>!</td>
         </tr>
         <tr>
-          <td>... go for a walk in the forest</td>
+          <td>… go for a walk in the forest</td>
           <td>Walk around <a href="http://vancouver.ca/parks-recreation-culture/stanley-park.aspx">Stanley Park</a>!</td>
         </tr>
         <tr>
-          <td>... go to the beach</td>
+          <td>… go to the beach</td>
           <td>Sunbathe at English Bay, Kits Beach, or if you’re adventurous, Wreck Beach!</td>
         </tr>
         <tr>
-          <td>... feel like a kid again</td>
+          <td>… feel like a kid again</td>
           <td>Spend a day at Science World!</td>
         </tr>
         <tr>
-          <td>... see the local wildlife</td>
+          <td>… see the local wildlife</td>
           <td>Visit the Vancouver Aquarium or take a Sea Safari at Sewell’s Marina!</td>
         </tr>
         <tr>
-          <td>... experience historic Vancouver</td>
+          <td>… experience historic Vancouver</td>
           <td>Wander around Gastown!</td>
         </tr>
         <tr>
-          <td>... view a panorama of Vancouver</td>
+          <td>… view a panorama of Vancouver</td>
           <td>Take the elevator up the Vancouver Lookout or take the gondola up Grouse Mountain!</td>
         </tr>
         <tr>
-          <td>... learn about Vancouver’s local history and culture</td>
+          <td>… explore Vancouver’s history and culture</td>
           <td>Visit the Museum of Anthropology or the Museum of Vancouver!</td>
         </tr>
         <tr>
-          <td>… explore thrift shops and trendy restaurants</td>
+          <td>… visit thrift shops and trendy restaurants</td>
           <td>Explore Main Street or Commercial Drive!</td>
         </tr>
       </table>
@@ -203,7 +226,7 @@
       <table class="table">
         <caption>I'm in the mood for ...</caption>
         <tr>
-          <td>... sushi</td>
+          <td class="col-md-4">... sushi</td>
           <td>Kishimoto (get there at 5:00pm if you don't want to wait!) or Fresh Sushi</td>
         </tr>
         <tr>
