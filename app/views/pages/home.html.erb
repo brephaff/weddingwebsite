@@ -145,7 +145,7 @@
       We both love Vancouver and we are very excited by this opportunity to share it with you. It has something for
       everyone! The easiest way to get around the city is to use public transit like the buses and Skytrains. If that's
       not your thing, we also have taxis. Like any major city, all of Vancouver's transit options are
-      <%= link_to 'available on Google Maps', 'https://www.google.com/maps' %>, so plan your trips there.
+      <%= link_to 'available on Google Maps', 'https://www.google.com/maps', :target => '_blank' %>, so plan your trips there.
     </p>
     <div class="row">
       <div class="col-md-4">
@@ -183,15 +183,15 @@
         <caption>I want to ...</caption>
         <tr>
           <td class="col-md-4">... go for a hike</td>
-          <td>Climb <a href="https://www.vancouvertrails.com/trails/stawamus-chief/">The Chief</a>!</td>
+          <td>Climb <a href="https://www.vancouvertrails.com/trails/stawamus-chief/" target="_blank">The Chief</a>!</td>
         </tr>
         <tr>
           <td>… shop and eat tasty food by the waterfront</td>
-          <td>Explore <a href="http://granvilleisland.com/">Granville Island</a>!</td>
+          <td>Explore <a href="http://granvilleisland.com/" target="_blank">Granville Island</a>!</td>
         </tr>
         <tr>
           <td>… go for a walk in the forest</td>
-          <td>Walk around <a href="http://vancouver.ca/parks-recreation-culture/stanley-park.aspx">Stanley Park</a>!</td>
+          <td>Walk around <a href="http://vancouver.ca/parks-recreation-culture/stanley-park.aspx" target="_blank">Stanley Park</a>!</td>
         </tr>
         <tr>
           <td>… go to the beach</td>
@@ -272,19 +272,35 @@
       Registry
     </h1>
     <p>We have created wishlists at Amazon.ca and Mountain Equipment Co-op. Given the size and lack of storage in our apartment, we would also appreciate gift cards to Amazon, West Elm, or Ikea. If you wish to ship items directly to us, you may ship them to:</p>
-    <address class="text-center">
+    <address>
       1903 - 1060 Alberni Street<br>
       Buzzer 129 <br>
       Vancouver, B.C. Canada <br>
       V6E 4K2 <br>
     </address>
-    <h2>
-      <a href="http://www.amazon.ca/registry/wishlist/3GYW51O5U9QPX">Amazon.ca</a>
-    </h2>
-    <p>Some items on our Amazon.ca wishlist are from external stores. If purchasing an item from an external store, you will need to go to that store's website or visit the store in-person to purchase the item. Once purchased, return to the list and click the "Buying this gift elsewhere?" button on the item to mark it as complete.</p>
-    <h2>
-      <a href="http://www.mec.ca/Apps/wishList/wishlist_main.jsp?id=ek1%3A3be1afefa494c5537e05755fcdb66e13"> Mountain Equipment Co-op</a>
-    </h2>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h1>
+          <small class="subtitle"><b>Amazon.ca</b></small>
+        </h1>
+        <p>Some items on our Amazon.ca wishlist are from external stores. If purchasing an item from an external store, you will need to go to that store's website or visit the store in-person to purchase the item. Once purchased, return to the list and click the "Buying this gift elsewhere?" button on the item to mark it as complete.</p>
+        <a href="http://www.amazon.ca/registry/wishlist/3GYW51O5U9QPX" class="btn" target="_blank">View Registry</a>
+      </div>
+
+      <div class="col-md-6">
+        <h1>
+          <small class="subtitle"><b>Mountain Equipment Co-op</b></small>
+        </h1>
+        <p>
+          We're going on a hiking trip after the wedding and could use a few supplies to make sure we're prepared.
+          MEC is a co-op so you need to be a member to buy stuff. If you're not a member, you can either
+          <%= link_to 'join', 'https://www.mec.ca/Membership/member_application.jsp', :target => 'blank'%>, or call their Service Center
+          (1.888.847.0770) to make gift purchases.
+        </p>
+        <a href="http://www.mec.ca/Apps/wishList/wishlist_main.jsp?id=ek1%3A3be1afefa494c5537e05755fcdb66e13" class="btn" target="_blank">View Registry</a>
+      </div>
+    </div>
   </div>
 </section>
 

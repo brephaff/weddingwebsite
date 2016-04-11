@@ -44,6 +44,10 @@
 
   @include nav-colour($navy-blue, $offwhite, $gold);
 
+  a {
+    color: $light-blue;
+  }
+
   .btn {
     @include wire-button(white, #333);
   }
