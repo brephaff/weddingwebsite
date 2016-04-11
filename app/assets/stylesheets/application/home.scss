@@ -38,9 +38,36 @@
 }
 
 // Hide the title section link without removing it so as not to mess up scrollspy
-#page_nav a[href="#title_section"]{
+#page_nav .nav a[href="#title_section"]{
   position: absolute;
   top: -100px;
+}
+
+#brand {
+  font-size: 2em;
+  margin: 0 2em;
+  text-decoration: none;
+}
+
+// Perfectly center the brand
+#page_nav {
+  #section_link_container {
+    position: relative;
+    display: inline-block;
+
+    .nav {
+      position: absolute;
+      white-space: nowrap;
+      top: 0;
+    }
+
+    .nav{
+      right: 100%;
+    }
+    #brand + .nav{
+      left: 100%;
+    }
+  }
 }
 
 .hotel_block {

@@ -1,12 +1,19 @@
-<% content_for :page_nav do %>
-  <li><a href="#title_section">Title</a></li>
-  <li><a href="#story_section">Our Story</a></li>
-  <li><a href="#save_the_date_section">Save the Date</a></li>
-  <li><a href="#wedding_details_section">Details</a></li>
-  <li><a href="#accommodations_section"><span class="hidden-xs">Accommodations</span><span class="visible-xs-inline">Hotels</span></a></li>
-  <li><a href="#about_vancouver_section">About Vancouver</a></li>
-  <li><a href="#registry_section">Registry</a></li>
-<% end %>
+<nav id="page_nav" class="hidden-xs">
+  <div id="section_link_container">
+    <ul class="nav" role="tablist">
+      <li><a href="#title_section">Title</a></li>
+      <li><a href="#story_section">Our Story</a></li>
+      <li><a href="#save_the_date_section">Save the Date</a></li>
+      <li><a href="#wedding_details_section">Details</a></li>
+    </ul>
+    <a id="brand" href="#title_section">Nick + Bre</a>
+    <ul class="nav" role="tablist">
+      <li><a href="#accommodations_section"><span class="hidden-xs">Accommodations</span><span class="visible-xs-inline">Hotels</span></a></li>
+      <li><a href="#about_vancouver_section">About Vancouver</a></li>
+      <li><a href="#registry_section">Registry</a></li>
+    </ul>
+  </div>
+</nav>
 
 <section class="section" id="title_section">
   <%= page_nav_colour_swap_background %>

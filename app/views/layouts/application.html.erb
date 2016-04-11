@@ -12,14 +12,6 @@
 
 <%= flash_messages %>
 
-<% if content_for? :page_nav %>
-<nav id="page_nav" class="hidden-xs">
-  <ul class="nav" role="tablist">
-    <%= content_for :page_nav %>
-  </ul>
-</nav>
-<% end %>
-
 <%= yield %>
 <%= javascript_include_tag 'application' %>
 </body>
