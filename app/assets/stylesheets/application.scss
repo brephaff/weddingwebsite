@@ -110,20 +110,14 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   text-transform: lowercase;
 
-  li {
-    a {
-      transition: color 0.5s;
-    }
-    a:hover, a:active, a:focus {
-      color: white;
-      background-color: transparent;
-      transition: color 0.15s;
-    }
+  a {
+    transition: color 0.5s;
   }
-  li.active{
-    a {
-      color: rgba(255,255,255,.85);
-    }
+
+  a:hover, a:active, a:focus {
+    color: white;
+    background-color: transparent;
+    transition: color 0.15s;
   }
 }
 
