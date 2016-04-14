@@ -2,8 +2,10 @@
   <div class="container">
   <% if @lookup_failure %>
     <h1 class="paper_title">I don't see you on my list.</h1>
-    <h2>How is your name spelled on the invitation?</h2>
-  <% else %>
+    <h2>
+      How is your name spelled on the invitation?
+    </h2>
+    <% else %>
     <h1 class="paper_title">May I have your name please...</h1>
   <% end %>
 
@@ -11,5 +13,8 @@
     <%= text_field_tag :name, params[:name], :placeholder => 'Name as it appears on the invitation', :size => 50 %>
     <%= submit_tag 'Find my invitation', :data => { :disable_with => "One moment please..." }, :class => 'btn' %>
   <% end %>
+  <h2>
+    <small>If you are unable to find your invitation, you can contact us at <a href="mailto:nickandbrewedding@gmail.com?Subject=RSVP" target="_top">nickandbrewedding@gmail.com</a></small>
+  </h2>
   </div>
 </section>
