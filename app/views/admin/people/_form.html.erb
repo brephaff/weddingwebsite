@@ -4,6 +4,9 @@
   <%= f.input(:last_name) %>
   <%= f.input(:email_address) %>
   <%= f.association(:household) %>
+  <%= f.input(:attending_wedding) %>
+  <%= f.input(:food_requirements) %>
+  <%= f.input(:song_requests) %>
 
   <%= f.submit %>
   <%= link_to('Cancel', admin_people_path) %>
