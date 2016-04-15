@@ -2,15 +2,19 @@ table {
   border-collapse: collapse;
 
   td {
-    padding: 1em;
+    padding: 0.5em;
   }
 
   th {
-    padding: 1em;
+    padding: 0.5em;
     text-align: left;
   }
 
   tbody {
     border: solid black 1px;
+  }
+
+  .squish {
+    white-space: nowrap;
   }
 }

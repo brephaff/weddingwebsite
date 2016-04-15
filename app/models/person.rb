@@ -4,6 +4,10 @@ class Person < ActiveRecord::Base
   validates_presence_of :first_name, :household
   validates_uniqueness_of :first_name, :scope => :last_name
 
+  scope :responded, lambda { where.not(:attending_wedding => nil) }
+  scope :attending, lambda { where(:attending_wedding => true) }
+  scope :not_attending, lambda { where(:attending_wedding => false) }
+
   delegate :full_street_address, :city, :province, :country, :postal_code, :to => :household, :allow_nil => true
 
   def name
