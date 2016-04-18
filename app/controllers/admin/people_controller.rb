@@ -45,6 +45,6 @@ class Admin::PeopleController < Admin::ApplicationController
   private
 
   def person_params
-    params.require(:person).permit(:first_name, :last_name, :email_address, :title, :household_id)
+    params.require(:person).permit(:first_name, :last_name, :nickname, :email_address, :title, :household_id, :attending_wedding, :food_requirements, :song_requests)
   end
 end

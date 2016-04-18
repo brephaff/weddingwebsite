@@ -13,6 +13,7 @@ class PersonImport
           person.title =  attributes['Title']
           person.first_name =  attributes['First Name']
           person.last_name =  attributes['Last Name']
+          person.nickname =  attributes['Nickname']
           person.email_address =  attributes['Email']
 
           # Make a household so we can temporarily store address info for this person
