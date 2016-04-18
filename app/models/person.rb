@@ -2,7 +2,7 @@ class Person < ActiveRecord::Base
   belongs_to :household
 
   validates_presence_of :first_name, :household
-  validates_uniqueness_of :first_name, :scope => :last_name
+  validates_uniqueness_of :first_name, :scope => [:last_name, :nickname]
 
   scope :responded, lambda { where.not(:attending_wedding => nil) }
   scope :attending, lambda { where(:attending_wedding => true) }
