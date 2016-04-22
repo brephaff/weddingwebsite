@@ -6,8 +6,10 @@ class Household < ActiveRecord::Base
 
   obfuscate_id
 
-  def self.find_by_person_name(name)
-    first_name, last_name = name.split
+  def self.find_by_person_name(full_name)
+    first_name, last_name = full_name.split
+    first_name = first_name.to_s
+    last_name = last_name.to_s
     joins(:people)
       .where('LOWER(first_name) = ? OR LOWER(nickname) = ?', first_name.strip.downcase, first_name.strip.downcase)
       .where('LOWER(last_name) = ?', last_name.strip.downcase)
