@@ -5,7 +5,7 @@
   <%= f.input(:nickname) %>
   <%= f.input(:email_address) %>
   <%= f.association(:household) %>
-  <%= f.input(:attending_wedding) %>
+  <%= f.input :attending_wedding, as: :radio_buttons %>
   <%= f.input(:food_requirements) %>
   <%= f.input(:song_requests) %>
 
