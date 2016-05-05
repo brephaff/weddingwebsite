@@ -5,6 +5,7 @@ class Person < ActiveRecord::Base
   validates_uniqueness_of :first_name, :scope => [:last_name, :nickname]
 
   scope :responded, lambda { where.not(:attending_wedding => nil) }
+  scope :not_responded, lambda { where(:attending_wedding => nil) }
   scope :attending, lambda { where(:attending_wedding => true) }
   scope :not_attending, lambda { where(:attending_wedding => false) }
 

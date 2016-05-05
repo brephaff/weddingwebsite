@@ -1,5 +1,6 @@
 <%= link_to "New Person", new_admin_person_path, :style => 'float:right' %>
 
+(<%= Person.not_responded.count %>) Waiting for Response /
 (<%= Person.responded.count %>) RSVP'd /
 (<%= Person.attending.count %>) Yes /
 (<%= Person.not_attending.count %>) No
