@@ -106,7 +106,15 @@ address {
   margin-bottom: 1em;
 }
 
-.vancouver_attraction_list {
-  padding-left: 100px;
-  padding-right: 100px;
+.bulleted_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li + li:before {
+    content: ". . .";
+    display: block;
+    color: #AAA;
+    margin: 1em 0;
+  }
 }
