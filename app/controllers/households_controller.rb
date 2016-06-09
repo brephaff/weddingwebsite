@@ -1,5 +1,9 @@
 class HouseholdsController < ApplicationController
 
+  def index
+    render :lookup
+  end
+
   def lookup
     if params[:name]
       redirect_to [:edit, Household.find_by_person_name(params[:name])]
