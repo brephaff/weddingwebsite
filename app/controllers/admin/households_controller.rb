@@ -38,6 +38,6 @@ class Admin::HouseholdsController < Admin::ApplicationController
   private
 
   def household_params
-    params.require(:household).permit(:street_address, :city, :province, :country, :postal_code)
+    params.require(:household).permit(:street_address, :city, :province, :country, :postal_code, :gift)
   end
 end

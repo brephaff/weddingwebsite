@@ -9,6 +9,7 @@
       <th>Province</th>
       <th>Country</th>
       <th>Postal Code</th>
+      <th>Gift</th>
     </tr>
   </thead>
 <% @households.each do |household| %>
@@ -19,6 +20,7 @@
     <td><%= household.province %></td>
     <td><%= household.country %></td>
     <td><%= household.postal_code %></td>
+    <td><%= household.gift %></td>
     <td><%= link_to 'Edit', edit_admin_household_path(household) %></td>
   </tr>
 <% end %>
