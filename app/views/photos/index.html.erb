@@ -15,7 +15,11 @@
   <ul class="gallery">
     <% @photos.each do |photo| %>
       <%= link_to photo.file.url(:web, :full), :target => '_blank', :class => 'photo' do %>
-        <%= image_tag photo.file.url(:web, :medium) %>
+        <li data-responsive-image>
+          <%= tag :img, 'data-src' => photo.file.url(:web, :small) %>
+          <%= tag :img, 'data-src' => photo.file.url(:web, :medium), 'min-width' => 200 %>
+          <%= tag :img, 'data-src' => photo.file.url(:web, :large), 'min-width' => 400 %>
+        </li>
       <% end %>
     <% end %>
   </ul>
