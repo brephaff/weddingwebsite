@@ -1,0 +1,9 @@
+<table>
+<% @photos.each do |photo| %>
+  <tr class='photo'>
+    <td><%= image_tag(photo.file.url(:medium)) %></td>
+    <td><%= link_to_accept_photo photo, 'data-behaviour' => 'accept-photo' unless photo.accepted? %></td>
+    <td><%= link_to_delete_photo photo, 'data-behaviour' => 'delete-photo' %></td>
+  </tr>
+<% end %>
+</table>

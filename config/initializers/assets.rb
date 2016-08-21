@@ -12,3 +12,4 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( households.css households.js )
 Rails.application.config.assets.precompile += %w( element_queries.js resize_sensor.js )
+Rails.application.config.assets.precompile += %w( admin.js )

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    resources :photos, :only => [:index, :update, :destroy]
     resources :households, :except => :show
     resources :people, :except => :show do
       get :import, :on => :collection
