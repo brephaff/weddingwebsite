@@ -1,5 +1,5 @@
 class FileUploader < CarrierWave::Uploader::Base
-  include CarrierWave::MiniMagick
+  include CarrierWave::RMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :file

@@ -20,7 +20,7 @@ gem 'obfuscate_id'
 gem "autoprefixer-rails"
 gem 'carrierwave'
 gem "fog-aws"
-gem "mini_magick"
+gem 'rmagick'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
