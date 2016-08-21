@@ -2,5 +2,6 @@
   <%= content_tag :label, photos_path, :class => 'btn' do %>
     <%= file_field_tag "file", :multiple => true %> <%= content_tag :span, 'Upload Photos', 'data-disable-with' => 'Uploading...' %>
   <% end %>
-  <%= link_to 'View the gallery', photos_path, :class => 'btn' %>
 <% end %>
+
+<%= link_to 'View the gallery', photos_path, :class => 'btn' %>

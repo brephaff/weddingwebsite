@@ -14,7 +14,7 @@ $('#photos_upload_form').S3Uploader({path: 'originals/'})
     $(this).find('[data-disable-with]').each(function(){
       $(this).text($(this).data('disable-with'))
     })
-    $(this).find(':input').attr('disabled', 'disabled')
+    $(this).css('pointerEvents', 'none')
   })
   .on('s3_uploads_complete', function(){
     window.location = '/photos/uploaded'
