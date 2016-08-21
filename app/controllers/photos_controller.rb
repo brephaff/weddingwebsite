@@ -9,7 +9,7 @@ class PhotosController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { redirect_to Photo }
+      format.html {  }
       format.json { render :nothing => true }
     end
   end

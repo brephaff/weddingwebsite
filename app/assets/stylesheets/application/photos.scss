@@ -28,3 +28,24 @@
     }
   }
 }
+
+#photos_upload_form {
+  label {
+    cursor: pointer;
+  }
+
+  input[type="file"]{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    z-index: -1;
+  }
+}
+
+#photo_upload_thank_you_section {
+  @include white-section;
+
+  p {
+    text-align: center;
+  }
+}

@@ -36,12 +36,7 @@
   <%= page_nav_colour_swap_background %>
   <div class="container">
     <h1>#NickAndBreWedding</h1>
-    <%= form_for(:photos, :url => Photo, :html => {:multipart => true}) do |f| %>
-      <%= content_tag :label, photos_path, :class => 'btn btn-lg', 'data-disable-with' => 'Uploading Photos...', 'data-behaviour' => 'submit-on-set' do %>
-        <%= file_field_tag "file[]", :multiple => true %> Upload Photos
-      <% end %>
-      <%= link_to 'View the gallery', photos_path, :class => 'btn btn-lg' %>
-    <% end %>
+    <%= render 'photos/upload_form' %>
   </div>
 </section>
 
