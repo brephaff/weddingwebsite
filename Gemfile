@@ -19,7 +19,7 @@ gem 'simple_form'
 gem 'obfuscate_id'
 gem "autoprefixer-rails"
 gem 'carrierwave'
-gem "fog-aws"
+gem 'fog', '~> 1.38.0'
 gem 'rmagick'
 
 # Use ActiveModel has_secure_password
