@@ -2,6 +2,7 @@
   <div id="section_link_container">
     <ul class="nav" role="tablist">
       <li><a href="#title_section">Title</a></li>
+      <li><a href="#photo_section">Photos</a></li>
       <li><a href="#story_section">Our Story</a></li>
       <li><a href="#save_the_date_section">Save the Date</a></li>
       <li><a href="#wedding_details_section">Details</a></li>
@@ -28,8 +29,19 @@
         <span class="visible-xs-block visible-sm-block visible-md-inline visible-lg-inline">Vancouver</span>
       </small>
     </h1>
+  </div>
+</section>
 
-    <%= link_to 'RSVP', lookup_households_path, :class => 'btn btn-lg' %>
+<section class="section" id="photo_section">
+  <%= page_nav_colour_swap_background %>
+  <div class="container">
+    <h1>#NickAndBreWedding</h1>
+    <%= form_for(:photos, :url => Photo, :html => {:multipart => true}) do |f| %>
+      <%= content_tag :label, photos_path, :class => 'btn btn-lg', 'data-disable-with' => 'Uploading Photos...', 'data-behaviour' => 'submit-on-set' do %>
+        <%= file_field_tag "file[]", :multiple => true %> Upload Photos
+      <% end %>
+      <%= link_to 'View the gallery', photos_path, :class => 'btn btn-lg' %>
+    <% end %>
   </div>
 </section>
 

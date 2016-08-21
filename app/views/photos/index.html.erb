@@ -1,0 +1,26 @@
+<nav id="page_nav" class="hidden-xs hidden-sm">
+  <div id="section_link_container">
+    <ul class="nav" role="tablist">
+      <li><a href="/#title_section">Home</a></li>
+    </ul>
+    <a id="brand" href="/#title_section">Nick + Bre</a>
+    <ul class="nav" role="tablist">
+      <li><a href="#gallery_section">Photos</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="section" id="gallery_section">
+  <%= page_nav_colour_swap_background %>
+  <ul class="gallery">
+    <% @photos.each do |photo| %>
+      <%= link_to photo.file.url(:web, :full), :target => '_blank', :class => 'photo' do %>
+        <%= image_tag photo.file.url(:web, :medium) %>
+      <% end %>
+    <% end %>
+  </ul>
+  <div class="container">
+  </div>
+</section>
+
+<%= javascript_include_tag 'resize_sensor', 'element_queries' %>

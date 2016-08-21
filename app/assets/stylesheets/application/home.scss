@@ -4,6 +4,23 @@
   @include navy-section;
 }
 
+#photo_section {
+  @include photo-section(image_path('photo_section_bg.jpg'));
+  min-height: 700px;
+  box-shadow: 0 0 45px rgba(0,0,0,.5) inset;
+
+  label {
+    cursor: pointer;
+  }
+
+  input[type="file"]{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    z-index: -1;
+  }
+}
+
 #story_section {
   @include white-section;
 }

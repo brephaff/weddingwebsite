@@ -8,3 +8,16 @@ $('[data-behaviour=on-value-show]').change(function(){
     $(target).hide()
   }
 }).change()
+
+$('[data-behaviour~=submit-on-set]').change(function(){
+  var input = event.target
+  if (input.value) {
+    input.form.submit()
+    input.form.reset()
+
+    disableWith = $(this).data('disable-with')
+    if (disableWith){
+      $(this).text(disableWith).find(':input').attr('disabled', 'disabled')
+    }
+  }
+})

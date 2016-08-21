@@ -18,6 +18,9 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'simple_form'
 gem 'obfuscate_id'
 gem "autoprefixer-rails"
+gem 'carrierwave'
+gem "fog-aws"
+gem "mini_magick"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
