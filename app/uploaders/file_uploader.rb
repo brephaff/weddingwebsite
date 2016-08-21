@@ -11,11 +11,8 @@ class FileUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  version :web do
-    version(:small)    { process(:resize_to_fill => [200, 200]) }
-    version(:medium)    { process(:resize_to_fill => [400, 400]) }
-    version(:large)     { process(:resize_to_fill => [1024, 768]) }
-    version(:full)     { process(:resize_to_fit => [1024, 768]) }
-    version(:original)
-  end
+  version(:small)    { process(:resize_to_fill => [200, 200]) }
+  version(:medium)    { process(:resize_to_fill => [400, 400]) }
+  version(:large)     { process(:resize_to_fill => [1024, 768]) }
+  version(:full)     { process(:resize_to_fit => [1024, 768]) }
 end

@@ -14,11 +14,11 @@
   <%= page_nav_colour_swap_background %>
   <ul class="gallery">
     <% @photos.each do |photo| %>
-      <%= link_to photo.file.url(:web, :full), :target => '_blank', :class => 'photo' do %>
+      <%= link_to photo.file.url(:full), :target => '_blank', :class => 'photo' do %>
         <li data-responsive-image>
-          <%= tag :img, 'data-src' => photo.file.url(:web, :small) %>
-          <%= tag :img, 'data-src' => photo.file.url(:web, :medium), 'min-width' => 200 %>
-          <%= tag :img, 'data-src' => photo.file.url(:web, :large), 'min-width' => 400 %>
+          <%= tag :img, 'data-src' => photo.file.url(:small) %>
+          <%= tag :img, 'data-src' => photo.file.url(:medium), 'min-width' => 200 %>
+          <%= tag :img, 'data-src' => photo.file.url(:large), 'min-width' => 400 %>
         </li>
       <% end %>
     <% end %>
