@@ -23,8 +23,12 @@
       <% end %>
     <% end %>
   </ul>
+  <% unless @photos.present? %>
   <div class="container">
+    <h1>Gallery is empty :(</h1>
+    <h2>Please come again!</h2>
   </div>
+  <% end %>
 </section>
 
 <%= javascript_include_tag 'resize_sensor', 'element_queries' %>
