@@ -20,6 +20,7 @@ gem 'obfuscate_id'
 gem "autoprefixer-rails"
 gem 'carrierwave'
 gem 'fog', '~> 1.38.0'
+gem 's3_direct_upload'
 gem 'rmagick'
 
 # Use ActiveModel has_secure_password

@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class Admin::PhotosController < Admin::ApplicationController
   def index
     @photos = Photo.order(:id => :desc)

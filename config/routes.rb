@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
-  resources :photos, :only => [:index, :create, :show]
+  resources :photos, :only => [:index, :create, :show] do
+    get :uploaded, :on => :collection
+  end
 
   resources :households, :only => [:index, :edit, :update], :path => 'rsvp' do
     match :lookup, :on => :collection, :via => [:get, :post]

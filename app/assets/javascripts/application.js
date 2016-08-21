@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require jquery.smooth-scroll
 //= require bootstrap-sprockets
+//= require s3_direct_upload
 //= require_tree ./application
 
 $(function(){

@@ -13,3 +13,9 @@ CarrierWave.configure do |config|
     config.fog_directory    = Rails.application.secrets.s3_bucket_name
   end
 end
+
+S3DirectUpload.config do |c|
+  c.access_key_id = Rails.application.secrets.s3_key # your access key id
+  c.secret_access_key = Rails.application.secrets.s3_secret # your secret access key
+  c.bucket = Rails.application.secrets.s3_bucket_name # your bucket name
+end

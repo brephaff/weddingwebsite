@@ -56,12 +56,20 @@ GEM
       sass (>= 3.2.19)
     builder (3.2.2)
     byebug (6.0.2)
-    carrierwave (0.10.0)
+    carrierwave (0.11.2)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+      mimemagic (>= 0.3.0)
     charlock_holmes (0.7.3)
+    coffee-rails (4.2.1)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0, < 5.2.x)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.10.0)
     culturecode-roo (2.0.2)
       nokogiri (~> 1)
       rubyzip (~> 1.1, < 2.0.0)
@@ -203,6 +211,10 @@ GEM
     i18n (0.7.0)
     inflecto (0.0.2)
     ipaddress (0.8.3)
+    jquery-fileupload-rails (0.4.7)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
+      sass (>= 3.2)
     jquery-rails (4.0.5)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -212,9 +224,10 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    mime-types (2.6.1)
+    mime-types (2.99.2)
+    mimemagic (0.3.2)
     mini_portile (0.6.2)
-    minitest (5.8.0)
+    minitest (5.9.0)
     multi_json (1.12.1)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
@@ -256,6 +269,11 @@ GEM
       trollop
     rmagick (2.16.0)
     rubyzip (1.1.7)
+    s3_direct_upload (0.1.7)
+      coffee-rails (>= 3.1)
+      jquery-fileupload-rails (~> 0.4.1)
+      rails (>= 3.1)
+      sass-rails (>= 3.1)
     sass (3.4.18)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -304,6 +322,7 @@ DEPENDENCIES
   pg
   rails (= 4.2.4)
   rmagick
+  s3_direct_upload
   sass-rails (~> 5.0)
   simple_form
   spreadsheet_importer!

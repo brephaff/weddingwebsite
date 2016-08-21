@@ -1,6 +1,6 @@
-<%= form_for(:photos, :url => Photo, :html => {:multipart => true, :id => 'photos_upload_form'}) do |f| %>
-  <%= content_tag :label, photos_path, :class => 'btn', 'data-disable-with' => 'Uploading...', 'data-behaviour' => 'submit-on-set' do %>
-    <%= file_field_tag "file[]", :multiple => true %> Upload Photos
+<%= s3_uploader_form(callback_url: photos_url, key_starts_with: 'originals', :id => 'photos_upload_form') do |f| %>
+  <%= content_tag :label, photos_path, :class => 'btn' do %>
+    <%= file_field_tag "file", :multiple => true %> <%= content_tag :span, 'Upload Photos', 'data-disable-with' => 'Uploading...' %>
   <% end %>
   <%= link_to 'View the gallery', photos_path, :class => 'btn' %>
 <% end %>

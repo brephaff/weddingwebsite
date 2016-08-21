@@ -3,15 +3,9 @@ class PhotosController < ApplicationController
     @photos = Photo.accepted
   end
 
-  def create
-    Array(params[:file]).each do |file|
-      Photo.create(photo_params.merge(:file => file))
-    end
-
-    respond_to do |format|
-      format.html {  }
-      format.json { render :nothing => true }
-    end
+  def create(*args)
+    Photo.create!(:attachment => open(params[:url]))
+    render :nothing => true
   end
 
   private

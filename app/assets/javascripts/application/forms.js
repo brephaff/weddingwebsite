@@ -9,15 +9,13 @@ $('[data-behaviour=on-value-show]').change(function(){
   }
 }).change()
 
-$('[data-behaviour~=submit-on-set]').change(function(){
-  var input = event.target
-  if (input.value) {
-    input.form.submit()
-    input.form.reset()
-
-    disableWith = $(this).data('disable-with')
-    if (disableWith){
-      $(this).text(disableWith).find(':input').attr('disabled', 'disabled')
-    }
-  }
-})
+$('#photos_upload_form').S3Uploader({path: 'originals/'})
+  .on('s3_uploads_start', function(){
+    $(this).find('[data-disable-with]').each(function(){
+      $(this).text($(this).data('disable-with'))
+    })
+    $(this).find(':input').attr('disabled', 'disabled')
+  })
+  .on('s3_uploads_complete', function(){
+    window.location = '/photos/uploaded'
+  })
