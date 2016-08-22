@@ -4,7 +4,7 @@ class PhotosController < ApplicationController
   end
 
   def create(*args)
-    Photo.create!(:attachment => open(params[:url]))
+    Photo.delay.create!(:attachment => open(params[:url]))
     render :nothing => true
   end
 
