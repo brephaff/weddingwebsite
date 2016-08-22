@@ -12,12 +12,12 @@
   padding: 15% 0;
 
 
-  @include parallax-background('photo_section_bg_2560x1707.jpg', 0%, 114%);
+  @include parallax-background('photo_section_bg_2560x1707.jpg', 10%, 114%);
   @media (max-width: 1440px) {
-    @include parallax-background('photo_section_bg_1440x960.jpg', 0%, 114%);
+    @include parallax-background('photo_section_bg_1440x960.jpg', 10%, 114%);
   }
   @media (max-width: 720px) {
-    @include parallax-background('photo_section_bg_720x480.jpg', 0%, 114%);
+    @include parallax-background('photo_section_bg_720x480.jpg', 10%, 114%);
   }
 }
 

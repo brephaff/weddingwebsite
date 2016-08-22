@@ -10,7 +10,7 @@ $(function(){
         var yPos = -($window.scrollTop() / speed);
 
         // Put together our final background position
-        var coords = '50% '+ yPos + 'px';
+        var coords = 'center bottom '+ yPos + 'px';
 
         // Move the background
         $bgobj.css({ backgroundPosition: coords });

@@ -112,12 +112,11 @@
   .parallax {
     width: 100%;
     height: $scale;
-    bottom: -$offset;
+    bottom: $offset;
     position: absolute;
     background-position: center top;
     background-image: image_url($image);
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 0 0 45px rgba(0,0,0,.5) inset;
   }
 }
