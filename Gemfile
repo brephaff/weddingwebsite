@@ -22,7 +22,6 @@ gem 'carrierwave'
 gem 'fog', '~> 1.38.0'
 gem 's3_direct_upload'
 gem 'rmagick'
-gem 'delayed_job_active_record'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

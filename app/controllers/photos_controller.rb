@@ -4,8 +4,11 @@ class PhotosController < ApplicationController
   end
 
   def create(*args)
-    Photo.delay.create!(:attachment => open(params[:url]))
+    FileUploader.config.enable_processing = false
+    Photo.create!(:attachment => open(params[:url]))
     render :nothing => true
+  ensure
+    FileUploader.config.enable_processing = true
   end
 
   private
