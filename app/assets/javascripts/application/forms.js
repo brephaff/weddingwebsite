@@ -9,7 +9,11 @@ $('[data-behaviour=on-value-show]').change(function(){
   }
 }).change()
 
-$('#photos_upload_form').S3Uploader({path: 'originals/'})
+$('#photos_upload_form')
+  .S3Uploader({
+    path: 'originals/',
+    progress_bar_target: $('#photos_upload_form .upload_progress')
+  })
   .on('s3_uploads_start', function(){
     $(this).find('[data-disable-with]').each(function(){
       $(this).text($(this).data('disable-with'))

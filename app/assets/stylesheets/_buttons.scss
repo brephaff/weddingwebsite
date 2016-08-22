@@ -13,7 +13,7 @@
 @mixin wire-button($colour, $textHoverColour) {
   @include wire-button-base($colour);
 
-  &:hover {
+  &:hover, .active {
     color: $textHoverColour !important;
     background-color: $colour;
   }
