@@ -28,3 +28,17 @@
   vertical-align: middle;
   padding: 0 12px;
 }
+
+@mixin wire-button-with-shadow($colour, $textHoverColour) {
+  .btn {
+    @include wire-button($colour, $textHoverColour);
+    box-shadow:
+      0 0 1px rgba(0, 0, 0, 0.3), 0 0 21px rgba(0, 0, 0, 0.3),
+      0 0 1px rgba(0, 0, 0, 0.3) inset, 0 0 21px rgba(0, 0, 0, 0.3) inset;
+
+    &:hover {
+      text-shadow: none;
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 0 21px rgba(0, 0, 0, 0.3);
+    }
+  }
+}

@@ -79,30 +79,10 @@
   @include nav-colour($gold, $light-gold, white);
 }
 
-@mixin photo-section($background_url) {
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 0 21px #000000;
-  position: relative;
-  overflow: hidden;
-  background-image: url($background_url);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  color: white;
-
+@mixin black-and-white-section {
   @include nav-colour(#333, $offwhite, $gold);
 
-  .btn {
-    @include wire-button(white, #333);
-    box-shadow:
-      0 0 1px rgba(0, 0, 0, 0.3), 0 0 21px rgba(0, 0, 0, 0.3),
-      0 0 1px rgba(0, 0, 0, 0.3) inset, 0 0 21px rgba(0, 0, 0, 0.3) inset;
-
-    &:hover {
-      text-shadow: none;
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 0 21px rgba(0, 0, 0, 0.3);
-    }
-  }
+  color: white;
 }
 
 // As the page nav enters the new section, change the colours
@@ -125,5 +105,19 @@
     .active a{
       color: $active;
     }
+  }
+}
+
+@mixin parallax-background($image, $offset: 0, $scale: 200%) {
+  .parallax {
+    width: 100%;
+    height: $scale;
+    bottom: -$offset;
+    position: absolute;
+    background-position: center top;
+    background-image: image_url($image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 45px rgba(0,0,0,.5) inset;
   }
 }
