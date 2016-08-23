@@ -109,14 +109,13 @@
 }
 
 @mixin parallax-background($image, $offset: 0, $scale: 200%) {
-  .parallax {
-    width: 100%;
-    height: $scale;
-    bottom: $offset;
-    position: absolute;
-    background-position: center top;
-    background-image: image_url($image);
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-attachment: fixed;
+  background-position: center bottom;
+  background-image: image_url($image);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @at-root .mobile & {
+    background-attachment: scroll;
   }
 }
