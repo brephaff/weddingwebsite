@@ -2,7 +2,7 @@
 @mixin wire-button-base($colour) {
   background-color: transparent;
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 1pt;
 
   color: $colour !important;
@@ -29,16 +29,15 @@
   padding: 0 12px;
 }
 
-@mixin wire-button-with-shadow($colour, $textHoverColour) {
+@mixin wire-button-with-shadow($colour, $textHoverColour, $shadow) {
   .btn {
     @include wire-button($colour, $textHoverColour);
-    box-shadow:
-      0 0 1px rgba(0, 0, 0, 0.3), 0 0 21px rgba(0, 0, 0, 0.3),
-      0 0 1px rgba(0, 0, 0, 0.3) inset, 0 0 21px rgba(0, 0, 0, 0.3) inset;
+    text-shadow: $shadow;
+    box-shadow: $shadow, $shadow inset;
 
     &:hover {
       text-shadow: none;
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 0 21px rgba(0, 0, 0, 0.3);
+      box-shadow: $shadow;
     }
   }
 }

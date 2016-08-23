@@ -6,9 +6,8 @@
 
 #photo_section {
   @include black-and-white-section;
-  @include wire-button-with-shadow(white, #333);
+  @include wire-button-with-shadow(white, #333, (0 0 1px rgba(0, 0, 0, 0.3), 0 0 21px rgba(0, 0, 0, 0.3)));
 
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 0 21px #000000;
   padding: 15% 0;
 
   @include parallax-background('photo_section_bg_2560x1707.jpg');

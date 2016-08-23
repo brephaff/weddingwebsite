@@ -80,6 +80,7 @@
 }
 
 @mixin black-and-white-section {
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 0 21px #000;
   @include nav-colour(#333, $offwhite, $gold);
 
   color: white;
