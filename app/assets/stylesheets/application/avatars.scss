@@ -1,21 +1,30 @@
 @mixin avatar {
   display: inline-block;
   width: 300px;
+  max-width: 100%;
   border-radius: 200px;
-  height: 300px;
   margin-top: 2em;
+
+  // Ensure the aspect ratio is maintained
+  &:after {
+    padding-top: 100%;
+    display: block;
+    content: '';
+  }
 }
 
 .bre_avatar{
   @include avatar;
+  position: relative;
   background: image_url('bre_avatar.jpg') -160px top no-repeat;
 }
 .bre_avatar_background{
   display: block;
   height: 300px;
-  position: relative;
+  position: absolute;
   z-index: -1;
   background: image_url('bre_avatar_bg.jpg') top no-repeat;
+  top: 0;
   left: -160px;
   width: 500px;
 }
