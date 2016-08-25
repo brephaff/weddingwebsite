@@ -11,7 +11,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :photos, :only => [:index, :destroy] do
-      post :accept_all, :on => :collection
       post :accept, :on => :member
     end
     resources :households, :except => :show

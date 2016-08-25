@@ -14,17 +14,6 @@ class Admin::PhotosController < Admin::ApplicationController
     end
   end
 
-  def accept_all
-    Photo.pending.find_each do |photo|
-      accept_photo(photo)
-    end
-
-    respond_to do |format|
-      format.html { redirect_to :back }
-      format.js { render :nothing => true }
-    end
-  end
-
   def destroy
     @photo = Photo.find(params[:id])
     @photo.destroy
