@@ -5,9 +5,9 @@ class Admin::PhotosController < Admin::ApplicationController
     @photos = Photo.order(:id => :desc)
   end
 
-  def update
+  def accept
     @photo = Photo.find(params[:id])
-    @photo.update_attributes(photo_params)
+    @photo.update_attributes(:accepted => true, :attachment => open(@photo.original_url))
     @photo.attachment.recreate_versions!
 
     respond_to do |format|
@@ -24,11 +24,5 @@ class Admin::PhotosController < Admin::ApplicationController
       format.html { redirect_to :back }
       format.js { render :nothing => true }
     end
-  end
-
-  private
-
-  def photo_params
-    params.require(:photo).permit(:accepted)
   end
 end
