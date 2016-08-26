@@ -5,7 +5,7 @@ module PhotosHelper
   end
 
   def link_to_accept_all_photos(html_options = {})
-    content_tag :span, 'Accept All', html_options.merge('data-behaviour' => 'accept-all-photos')
+    link_to 'Accept All', 'javascript:', html_options.merge('data-behaviour' => 'accept-all-photos')
   end
 
   def link_to_delete_photo(photo, html_options = {})
