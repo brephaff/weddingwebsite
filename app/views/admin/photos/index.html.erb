@@ -4,8 +4,8 @@
 <% @photos.pending.each do |photo| %>
   <tr class='photo'>
     <td><%= link_to image_tag(photo.original_url, :style => 'max-width:200px; max-height: 200px;'), photo.original_url, :target => '_blank' %></td>
-    <td><%= link_to_accept_photo photo, 'data-behaviour' => 'accept-photo' unless photo.accepted? %></td>
-    <td><%= link_to_delete_photo photo, 'data-behaviour' => 'delete-photo' %></td>
+    <td><%= link_to_accept_photo photo unless photo.accepted? %></td>
+    <td><%= link_to_delete_photo photo %></td>
   </tr>
 <% end %>
 </table>
@@ -15,7 +15,7 @@
 <% @photos.accepted.each do |photo| %>
   <tr class='photo'>
     <td><%= image_tag(photo.attachment.url(:small)) %></td>
-    <td><%= link_to_delete_photo photo, 'data-behaviour' => 'delete-photo' %></td>
+    <td><%= link_to_delete_photo photo %></td>
   </tr>
 <% end %>
 </table>
