@@ -7,8 +7,16 @@ class FileUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
+  process :fix_exif_rotation
+
   version(:small)    { process(:resize_to_fill => [200, 200]) }
-  version(:medium)    { process(:resize_to_fill => [400, 400]) }
-  version(:large)     { process(:resize_to_fill => [1024, 768]) }
+  version(:medium)   { process(:resize_to_fill => [400, 400]) }
+  version(:large)    { process(:resize_to_fill => [1024, 768]) }
   version(:full)     { process(:resize_to_fit => [1024, 768]) }
+
+  def fix_exif_rotation
+    manipulate! do |img|
+      img.tap(&:auto_orient)
+    end
+  end
 end
