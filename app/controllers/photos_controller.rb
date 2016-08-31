@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
   def index
-    @photos = Photo.accepted
+    @photos = Photo.accepted.order(:id => :desc)
   end
 
   def create(*args)
