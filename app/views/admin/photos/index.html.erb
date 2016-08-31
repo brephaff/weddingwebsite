@@ -15,6 +15,7 @@
 <% @photos.accepted.each do |photo| %>
   <tr class='photo'>
     <td><%= image_tag(photo.attachment.url(:small)) %></td>
+    <td><%= link_to_accept_photo photo %></td>
     <td><%= link_to_delete_photo photo %></td>
   </tr>
 <% end %>

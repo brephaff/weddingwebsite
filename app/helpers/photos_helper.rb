@@ -1,7 +1,8 @@
 module PhotosHelper
   def link_to_accept_photo(photo, html_options = {})
     html_options = html_options.reverse_merge :remote => true, :method => :post, 'data-behaviour' => 'accept-photo'
-    link_to 'Accept', [:accept, :admin, photo], html_options
+    text = photo.accepted? ? 'Reprocess' : 'Accept'
+    link_to text, [:accept, :admin, photo], html_options
   end
 
   def link_to_accept_all_photos(html_options = {})
