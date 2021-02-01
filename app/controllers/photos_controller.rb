@@ -4,7 +4,8 @@ class PhotosController < ApplicationController
   end
 
   def create(*args)
-    Photo.create!(:original_url => params[:url])
+    # MAINTENANCE MODE
+    # Photo.create!(:original_url => params[:url])
     render :nothing => true
   end
 

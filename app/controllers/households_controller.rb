@@ -18,8 +18,9 @@ class HouseholdsController < ApplicationController
   end
 
   def update
-    @household = Household.find(params[:id])
-    @household.update_attributes!(household_params)
+    # MAINTENANCE MODE
+    # @household = Household.find(params[:id])
+    # @household.update_attributes!(household_params)
   end
 
   private
